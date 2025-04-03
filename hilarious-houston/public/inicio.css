@@ -1,0 +1,232 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    143deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(53, 53, 53, 0.6747535684195554) 27%,
+    rgba(140, 141, 122, 0.8848376020330007) 100%
+  );
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 140px;
+  display: flex;
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+  background: white;
+  background: linear-gradient(
+    143deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(53, 53, 53, 1) 27%,
+    rgba(140, 141, 122, 1) 100%
+  ), white;
+  border-bottom: 4px solid #000;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 0 20px; /* Añade padding horizontal */
+}
+
+/* Logo centrado */
+.header .logo {
+  height: 100px; /* Ajusta el tamaño del logo */
+}
+
+/* Botones del header */
+.header-left,
+.header-right {
+  position: absolute; /* Posiciona los botones en los extremos */
+  top: 50%;
+  transform: translateY(-50%); /* Centra verticalmente */
+}
+
+.header-left {
+  left: 20px; /* Separa los botones del borde izquierdo */
+}
+
+.header-right {
+  right: 20px; /* Separa el botón de iniciar sesión del borde derecho */
+}
+
+.header-left .btn-header,
+.header-right .login-button {
+  background-color: #353535; /* Gris oscuro */
+  color: white;
+  border: none;
+  padding: 15px 30px; /* Igual que el botón de iniciar sesión */
+  margin-right: 15px; /* Espaciado entre botones */
+  border-radius: 15px; /* Bordes redondeados */
+  font-size: 22px; /* Igual que el botón de iniciar sesión */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.header-left .btn-header:hover,
+.header-right .login-button:hover {
+  background-color: #6c6c6c; /* Gris más claro */
+  transform: scale(1.05); /* Efecto de agrandamiento */
+}
+
+/* Contenido principal */
+.main-content {
+  height: calc(100vh - 72px); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto; 
+  border-radius: 20px; 
+  overflow: hidden; 
+}
+
+.main-content img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; 
+}
+
+/* Botón de login */
+.login-button {
+  position: absolute;
+  right: 20px; 
+  background-color: #353535; 
+  color: white; 
+  border: none;
+  padding: 15px 30px;
+  cursor: pointer;
+  font-size: 22px;
+  border-radius: 15px; 
+  transition: background-color 0.3s ease; 
+}
+
+.login-button:hover {
+  background-color: #6c6c6c; 
+}
+
+
+.hero {
+  height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 100px; 
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+
+.cart-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.cart-button .btn-cart {
+  background-color: #ffc107 !important; 
+  color: black !important;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cart-button .btn-cart:hover {
+  background-color: #e0a800 !important; 
+  transform: scale(1.1);
+}
+
+/* Popup del carrito */
+.cart-popup {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px; /* Mantén el ancho */
+  height: 400px; /* Aumenta la altura */
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 20px; /* Ajusta el padding */
+  z-index: 1000;
+  display: flex;
+  flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+  justify-content: space-between; /* Espacia los elementos */
+}
+
+.cart-popup h5 {
+  margin: 0;
+  font-size: 1.5rem; /* Ajusta el tamaño del texto */
+  color: #333; /* Color empresarial */
+  text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.cart-popup p {
+  font-size: 1.2rem; /* Ajusta el tamaño del texto */
+  color: #555; /* Color empresarial */
+  line-height: 1.6; /* Mejora la legibilidad */
+}
+
+.cart-popup .btn-close-cart {
+  background-color: #dc3545 !important; /* Rojo */
+  color: white !important;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cart-popup .btn-close-cart:hover {
+  background-color: #c82333 !important; /* Rojo más oscuro */
+}
+
+.cart-popup .btn-pay {
+  background-color: #28a745; /* Verde */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.cart-popup .btn-pay:hover {
+  background-color: #218838; /* Verde más oscuro */
+}
+
+/* Ocultar el popup */
+.d-none {
+  display: none;
+}
+
+/* Contenido adicional */
+.content {
+  padding: 50px; /* Cambiado a 50px */
+  background-color: #f8f9fa; /* Fondo claro */
+  text-align: center;
+}
+
+.content h1 {
+  margin-top: 20px;
+  font-size: 2.5rem; /* Texto más grande */
+  color: #333; /* Color empresarial */
+}
+
+.content p {
+  font-size: 1.2rem;
+  color: #555; /* Color empresarial */
+  line-height: 1.6; /* Mejora la legibilidad */
+}
