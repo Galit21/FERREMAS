@@ -7,6 +7,7 @@ const startServer = (options) => {
   const app = express();
 
 
+
   app.use(express.static(public_path));
   app.use('/js', express.static(path.join(__dirname, '../public/js')));
   app.use('/img', express.static(path.join(__dirname, '../public/img')));
@@ -27,6 +28,25 @@ const startServer = (options) => {
     res.sendFile(indexPath);
   });
 
+=======
+  app.use(express.static(public_path));
+
+  //Rutas
+  app.get("/login", (req, res) => {
+    const indexPath = path.join(__dirname, "..", public_path, "login.html");
+    res.sendFile(indexPath);
+  });
+  app.get("/admin", (req, res) => {
+    const indexPath = path.join(__dirname, "..", public_path, "admin_panel.html");
+    res.sendFile(indexPath);
+  });
+  app.get("*", (req, res) => {
+    const indexPath = path.join(__dirname, "..", public_path, "login.html");
+    res.sendFile(indexPath);
+  });
+
+
+ main
   app.listen(port, () => {
     console.log(`Servidor corriendo en el puerto ${port}`);
   });
