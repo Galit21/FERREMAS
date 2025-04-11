@@ -1,0 +1,157 @@
+.logo_login {
+  width: 100px;
+  height: 100px;
+}
+
+/* Fondo degradado */
+.fondo {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    143deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(53, 53, 53, 0.6747535684195554) 27%,
+    rgba(140, 141, 122, 0.8848376020330007) 100%
+  );
+}
+
+.bordes {
+  padding: 180px;
+}
+
+.logo_pag {
+  max-width: 180px;
+  height: auto;
+}
+
+.bi {
+  font-size: 2rem;
+  color: #000000;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: rgba(255, 255, 255, 0.8); 
+  padding: 20px;
+  height: 100%;
+}
+
+.sidebar-content {
+  color: #000; 
+}
+
+.sidebar h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+
+.sidebar button {
+  font-size: 1.2rem;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #f4a261; 
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sidebar button:hover {
+  background-color: #e76f51; 
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3); 
+}
+
+/* Contenido principal */
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.content-box {
+  border: 2px solid #000;
+  width: 95%; 
+  height: 90%; 
+  background-color: rgba(255, 255, 255, 0.9); 
+  padding: 20px;
+  overflow-y: auto;
+  color: #000; 
+}
+
+/* Ajustar el tamaño del logo en la página de login */
+.logo-login {
+  width: 890px; /* Ajusta el ancho del logo */
+  height: 700px; /* Mantén la proporción del logo */
+}
+
+/* Estilo para las cajas de texto en la página de login */
+input[type="email"],
+input[type="password"] {
+  font-size: 1.5rem; /* Aumenta el tamaño del texto */
+  padding: 15px; /* Aumenta el espacio interno */
+  height: 60px; /* Ajusta la altura */
+  border: 2px solid #ccc; /* Borde más visible */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #007bff; /* Cambia el color del borde al enfocar */
+  box-shadow: 0px 4px 8px rgba(0, 123, 255, 0.3); /* Sombra más intensa */
+}
+
+form .btn-ingresar {
+  background-color: #4d5055; 
+  color: white;
+  font-size: 1.2rem;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form .btn-ingresar:hover {
+  background-color: #4d5055; /* Verde más oscuro */
+  transform: scale(1.05); /* Efecto de agrandamiento */
+}
+
+/* Botón de crear cuenta */
+.text-center .btn-crear-cuenta {
+  background-color: #ffc107; /* Amarillo */
+  color: black;
+  font-size: 1rem; /* Más pequeño que el botón de ingresar */
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.text-center .btn-crear-cuenta:hover {
+  background-color: #e0a800; /* Amarillo más oscuro */
+  transform: scale(1.05); /* Efecto de agrandamiento */
+}
+
+/* Botón de volver */
+.text-center .btn-volver {
+  background-color: #6c757d; /* Gris */
+  color: white;
+  font-size: 1rem;
+  padding: 11px;
+  border: none;
+  border-radius: 9px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.text-center .btn-volver:hover {
+  background-color: #5a6268; /* Gris más oscuro */
+  transform: scale(1.05); /* Efecto de agrandamiento */
+}
+
+
+
+
