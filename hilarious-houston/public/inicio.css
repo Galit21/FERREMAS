@@ -7,6 +7,11 @@
   --transition: 0.3s ease;
 }
 
+/* Reducir el tamaño base de la fuente */
+html {
+  font-size: 14px; /* Cambia esto según lo que necesites (por ejemplo, 12px o 13px) */
+}
+
 /* Estilos generales */
 body {
   margin: 0;
@@ -19,6 +24,7 @@ body {
     rgba(53, 53, 53, 0.6747535684195554) 27%,
     rgba(140, 141, 122, 0.8848376020330007) 100%
   );
+  font-size: 1rem; /* Ajusta el tamaño relativo */
 }
 
 /* Header */
@@ -76,9 +82,9 @@ body {
   background-color: var(--primary-color); /* Gris oscuro */
   color: white;
   border: none;
-  padding: 15px 30px; /* Tamaño uniforme para todos los botones */
+  padding: 10px 20px; /* Reducir el padding */
   border-radius: var(--border-radius); /* Bordes redondeados */
-  font-size: 22px; /* Tamaño del texto */
+  font-size: 1rem; /* Tamaño relativo basado en el tamaño base */
   cursor: pointer;
   transition: background-color var(--transition), transform 0.2s ease;
 }
@@ -113,9 +119,9 @@ body {
   background-color: var(--primary-color);
   color: white;
   border: none;
-  padding: 15px 30px;
+  padding: 10px 20px; /* Reducir el padding */
   cursor: pointer;
-  font-size: 22px;
+  font-size: 1rem; /* Ajustar el tamaño relativo */
   border-radius: var(--border-radius);
   transition: background-color var(--transition);
 }
@@ -206,13 +212,13 @@ body {
 
 .cart-popup h5 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.2rem; /* Reducir el tamaño del texto */
   color: var(--text-color);
   text-align: left;
 }
 
 .cart-popup p {
-  font-size: 1.2rem;
+  font-size: 1rem; /* Ajustar el tamaño relativo */
   color: #555;
   line-height: 1.6;
 }
@@ -291,8 +297,8 @@ body {
   background-color: var(--primary-color);
   color: white;
   border: none;
-  padding: 15px 30px;
-  font-size: 1rem;
+  padding: 10px 20px; /* Reducir el padding */
+  font-size: 0.9rem; /* Ajustar proporcionalmente */
   border-radius: var(--border-radius);
   cursor: pointer;
   transition: background-color var(--transition), transform 0.2s ease;
