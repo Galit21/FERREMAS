@@ -1,0 +1,310 @@
+:root {
+  --primary-color: #353535;
+  --secondary-color: #6c6c6c;
+  --text-color: #333;
+  --background-color: #ffffff;
+  --border-radius: 15px;
+  --transition: 0.3s ease;
+}
+
+/* Reducir el tamaño base de la fuente */
+html {
+  font-size: 14px; /* Cambia esto según lo que necesites (por ejemplo, 12px o 13px) */
+}
+
+/* Estilos generales */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    143deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(53, 53, 53, 0.6747535684195554) 27%,
+    rgba(140, 141, 122, 0.8848376020330007) 100%
+  );
+  font-size: 1rem; /* Ajusta el tamaño relativo */
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px; /* Altura del header */
+  display: flex;
+  justify-content: space-between; /* Espacia los elementos a los lados */
+  align-items: center; /* Centra los elementos verticalmente */
+  background-color: var(--background-color);
+  z-index: 1000;
+  padding: 0 20px; /* Padding horizontal */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para el header */
+  transition: transform var(--transition);
+  position: relative; /* Necesario para posicionar el logo */
+}
+
+.header.hidden {
+  transform: translateY(-100%);
+}
+
+.header.visible {
+  transform: translateY(0);
+}
+
+/* Logo centrado */
+.header .logo {
+  position: absolute; /* Posiciona el logo de forma absoluta */
+  top: 50%; /* Centra verticalmente */
+  left: 50%; /* Centra horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta el logo al centro exacto */
+  height: 80px; /* Tamaño del logo */
+  margin: 0 auto;
+}
+
+.logo {
+  height: 80px;
+}
+
+/* Contenedores de botones */
+.header-left,
+.header-right {
+  display: flex; /* Alineación horizontal */
+  align-items: center; /* Centrado vertical */
+  gap: 15px; /* Espaciado entre botones */
+  z-index: 1; /* Asegura que los botones no se superpongan con el logo */
+}
+
+/* Botones del header */
+.header-left .btn-header,
+.header-right .login-button {
+  background-color: var(--primary-color); /* Gris oscuro */
+  color: white;
+  border: none;
+  padding: 10px 20px; /* Reducir el padding */
+  border-radius: var(--border-radius); /* Bordes redondeados */
+  font-size: 1rem; /* Tamaño relativo basado en el tamaño base */
+  cursor: pointer;
+  transition: background-color var(--transition), transform 0.2s ease;
+}
+
+.header-left .btn-header:hover,
+.header-right .login-button:hover {
+  background-color: var(--secondary-color); /* Gris más claro */
+  transform: scale(1.05); /* Efecto de agrandamiento */
+}
+
+/* Contenido principal */
+.main-content {
+  height: calc(100vh - 72px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.main-content img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Botón de login */
+.login-button {
+  position: absolute;
+  right: 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px; /* Reducir el padding */
+  cursor: pointer;
+  font-size: 1rem; /* Ajustar el tamaño relativo */
+  border-radius: var(--border-radius);
+  transition: background-color var(--transition);
+}
+
+.login-button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Botones del carrusel */
+.btn-prev,
+.btn-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.btn-prev {
+  left: 20px;
+}
+
+.btn-next {
+  right: 20px;
+}
+
+/* Botón del carrito */
+.cart-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.cart-button .btn-cart {
+  background-color: #ffc107 !important;
+  color: black !important;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color var(--transition), transform 0.2s ease;
+}
+
+.cart-button .btn-cart:hover {
+  background-color: #e0a800 !important;
+  transform: scale(1.1);
+}
+
+/* Popup del carrito */
+.cart-popup {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  height: 400px;
+  background-color: var(--background-color);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cart-popup h5 {
+  margin: 0;
+  font-size: 1.2rem; /* Reducir el tamaño del texto */
+  color: var(--text-color);
+  text-align: left;
+}
+
+.cart-popup p {
+  font-size: 1rem; /* Ajustar el tamaño relativo */
+  color: #555;
+  line-height: 1.6;
+}
+
+.cart-popup .btn-close-cart {
+  background-color: #dc3545 !important;
+  color: white !important;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color var(--transition);
+}
+
+.cart-popup .btn-close-cart:hover {
+  background-color: #c82333 !important;
+}
+
+.cart-popup .btn-pay {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color var(--transition);
+}
+
+.cart-popup .btn-pay:hover {
+  background-color: #218838;
+}
+
+/* Ocultar el popup */
+.d-none {
+  display: none;
+}
+
+/* Contenido adicional */
+.content {
+  padding: 50px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.content h1 {
+  margin-top: 20px;
+  font-size: 2.5rem;
+  color: var(--text-color);
+}
+
+.content p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Contact Form */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--background-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form .btn-submit {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px; /* Reducir el padding */
+  font-size: 0.9rem; /* Ajustar proporcionalmente */
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition), transform 0.2s ease;
+}
+
+.contact-form .btn-submit:hover {
+  background-color: var(--secondary-color);
+  transform: scale(1.05);
+}
