@@ -308,3 +308,7 @@ body {
   background-color: var(--secondary-color);
   transform: scale(1.05);
 }
+
+form{
+    text-align: left;
+}

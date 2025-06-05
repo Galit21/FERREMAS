@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "nombre": "Martillo de acero",
+    "descripcion": "Martillo profesional con mango antideslizante.",
+    "precio": 12.99,
+    "imagenn": "https://imagens.unsplash.com/photo-1605283172028-d26929f2a339?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 2,
+    "nombre": "Taladro eléctrico",
+    "descripcion": "Taladro inalámbrico ideal para madera y concreto.",
+    "precio": 89.99,
+    "imagen": "https://imagens.unsplash.com/photo-1581092917330-8eaa02f6b99e?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 3,
+    "nombre": "Caja de herramientas",
+    "descripcion": "Incluye llaves, destornilladores, y más.",
+    "precio": 59.5,
+    "imagen": "https://imagens.unsplash.com/photo-1616627983856-4cbbd5fc4cf2?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 4,
+    "nombre": "Guantes de seguridad",
+    "descripcion": "Guantes resistentes para trabajos pesados.",
+    "precio": 9.99,
+    "imagen": "https://imagens.unsplash.com/photo-1581090700227-1e8d8736f1e7?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 5,
+    "nombre": "Casco de protección",
+    "descripcion": "Casco industrial para protección en obra.",
+    "precio": 15.0,
+    "imagen": "https://imagens.unsplash.com/photo-1603618098570-3ff58a7b4c9c?auto=format&fit=crop&w=600&q=80"
+  }
+]

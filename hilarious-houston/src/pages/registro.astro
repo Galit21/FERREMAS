@@ -25,16 +25,29 @@ import Header from '../components/Header.jsx';
       <p>Completa el formulario para crear tu cuenta.</p>
 
       <form id="registroForm" class="contact-form p-4 bg-white rounded shadow mx-auto" style="max-width: 600px;">
-        <div class="mb-3">
-          <label for="nombre" class="form-label">Nombre:</label>
-          <input
-            type="text"
-            id="nombre"
-            name="nombre"
-            class="form-control"
-            placeholder="Ingresa tu nombre"
-            required
-          />
+        <div class="row mb-3">
+          <div class="col">
+            <label for="nombre" class="form-label">Nombre:</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              class="form-control"
+              placeholder="Nombre"
+              required
+            />
+          </div>
+          <div class="col">
+            <label for="apellido" class="form-label">Apellido:</label>
+            <input
+              type="text"
+              id="apellido"
+              name="apellido"
+              class="form-control"
+              placeholder="Apellido"
+              required
+            />
+          </div>
         </div>
         <div class="mb-3">
           <label for="email" class="form-label">Correo Electrónico:</label>
