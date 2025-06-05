@@ -30,7 +30,7 @@ export default function ProductoComponent() {
                 </p>
                 <div className="mt-auto d-flex justify-content-between align-items-center">
                   <span className="h5 mb-0">${producto.precio}</span>
-                  <button className="btn btn-outline-primary">
+                  <button className="btn btn-outline-dark">
                     <i className="bi bi-cart-plus"></i> Añadir
                   </button>
                 </div>

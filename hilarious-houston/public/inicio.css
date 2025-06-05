@@ -312,3 +312,23 @@ body {
 form{
     text-align: left;
 }
+
+.cart-item img {
+     max-width: 100px;
+     height: auto;
+ }
+
+ .quantity-input {
+     width: 50px;
+ }
+
+ .cart-summary {
+     background-color: #f8f9fa;
+     border-radius: 10px;
+ }
+
+ .body_carrocompra{
+      background-color: #f8f9fa;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ }
