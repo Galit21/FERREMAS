@@ -3,7 +3,7 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
-// Configuración de Firebase (obtén esto desde Firebase Console)
+// Configuración de Firebase 
 const firebaseConfig = {
     apiKey: "AIzaSyDPi_8hN1XbqUFpk2Uv7U4vdJuS2R8UgKY",
     authDomain: "ferremas-d854c.firebaseapp.com",

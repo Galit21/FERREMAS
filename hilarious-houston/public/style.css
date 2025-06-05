@@ -54,13 +54,13 @@ body {
 
 /* Sidebar */
 .sidebar {
-  background-color: rgba(255, 255, 255, 0.8); 
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 15px; /* Reducir el padding */
   height: 100%;
 }
 
 .sidebar-content {
-  color: #000; 
+  color: #000;
 }
 
 .sidebar h1 {
@@ -72,17 +72,17 @@ body {
 .sidebar button {
   font-size: 0.9rem; /* Reducir el tamaño de fuente */
   padding: 10px 15px; /* Reducir el padding */
-  background-color: #f4a261; 
+  background-color: #f4a261;
   color: #fff;
   border: none;
   border-radius: 5px; /* Bordes más pequeños */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .sidebar button:hover {
-  background-color: #e76f51; 
-  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3); 
+  background-color: #e76f51;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Contenido principal */
@@ -96,17 +96,17 @@ body {
 
 .content-box {
   border: 2px solid #000;
-  width: 95%; 
-  height: 90%; 
-  background-color: rgba(255, 255, 255, 0.9); 
+  width: 95%;
+  height: 90%;
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 15px; /* Reducir el padding interno */
   overflow-y: auto;
-  color: #000; 
+  color: #000;
 }
 
 /* Reducir el tamaño del logo en la página de login */
 .logo-login {
-  width: 500px; /* Ajusta el ancho del logo */
+  width: 300px; /* Ajusta el ancho del logo */
   height: auto; /* Mantén la proporción del logo */
   margin-bottom: 20px; /* Espaciado inferior */
 }
@@ -131,7 +131,7 @@ input[type="password"]:focus {
 
 /* Botón de login */
 form .btn-ingresar {
-  background-color: #4d5055; 
+  background-color: #4d5055;
   color: white;
   font-size: 1rem; /* Tamaño de fuente más legible */
   padding: 10px 15px; /* Padding ajustado */
@@ -176,7 +176,3 @@ form .btn-ingresar:hover {
   background-color: #5a6268; /* Gris más oscuro */
   transform: scale(1.03); /* Efecto de agrandamiento más sutil */
 }
-
-
-
-

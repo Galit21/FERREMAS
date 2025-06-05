@@ -1,0 +1,121 @@
+[
+  {
+    "id": 1,
+    "nombre": "Martillo de acero",
+    "descripcion": "Martillo profesional con mango antideslizante.",
+    "precio": 12.99,
+    "imagen": "https://cdnx.jumpseller.com/megastools/image/35996784/resize/540/600?1685773516"
+  },
+  {
+    "id": 2,
+    "nombre": "Taladro eléctrico",
+    "descripcion": "Taladro inalámbrico ideal para madera y concreto.",
+    "precio": 89.99,
+    "imagenn": "https://cdnx.jumpseller.com/redbo-chile/image/30552977/thumb/1079/1079?1734728188"
+  },
+  {
+    "id": 3,
+    "nombre": "Caja de herramientas",
+    "descripcion": "Incluye llaves, destornilladores, y más.",
+    "precio": 59.5,
+    "imagenn": "https://cdnx.jumpseller.com/ferreteria-mfs/image/24602575/resize/1200/1200?1671627008"
+  },
+  {
+    "id": 4,
+    "nombre": "Guantes de seguridad",
+    "descripcion": "Guantes resistentes para trabajos pesados.",
+    "precio": 9.99,
+    "imagenn": "https://images.unsplash.com/photo-1581090700227-1e8d8736f1e7?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 5,
+    "nombre": "Casco de protección",
+    "descripcion": "Casco industrial para protección en obra.",
+    "precio": 15.0,
+    "imagenn": "https://images.unsplash.com/photo-1603618098570-3ff58a7b4c9c?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 6,
+    "nombre": "Nivel de burbuja",
+    "descripcion": "Herramienta precisa para nivelación en construcciones.",
+    "precio": 8.75,
+    "imagenn": "https://images.unsplash.com/photo-1616628193780-27e0be4eae9f?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 7,
+    "nombre": "Cinta métrica",
+    "descripcion": "Cinta retráctil de 5 metros con bloqueo.",
+    "precio": 4.99,
+    "imagenn": "https://images.unsplash.com/photo-1595777457587-8b1c350d4ee6?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 8,
+    "nombre": "Lentes de seguridad",
+    "descripcion": "Protección ocular para trabajos industriales.",
+    "precio": 6.8,
+    "imagenn": "https://images.unsplash.com/photo-1600851267493-d8bd7e94cf72?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 9,
+    "nombre": "Botas de trabajo",
+    "descripcion": "Botas con punta de acero, resistentes y cómodas.",
+    "precio": 49.9,
+    "imagenn": "https://images.unsplash.com/photo-1583337130417-3346a1e62d53?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 10,
+    "nombre": "Destornillador eléctrico",
+    "descripcion": "Ideal para ensamblajes rápidos.",
+    "precio": 34.99,
+    "imagenn": "https://images.unsplash.com/photo-1607344645265-0bb06d4b3c7f?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 11,
+    "nombre": "Llave inglesa",
+    "descripcion": "Ajustable y resistente para tuercas y tornillos.",
+    "precio": 11.3,
+    "imagenn": "https://images.unsplash.com/photo-1589927986089-35812388d1d9?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 12,
+    "nombre": "Serrucho manual",
+    "descripcion": "Para cortes precisos en madera.",
+    "precio": 14.2,
+    "imagenn": "https://images.unsplash.com/photo-1585559601292-aca78b9ef73d?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 13,
+    "nombre": "Carretilla de carga",
+    "descripcion": "Ideal para mover sacos y materiales pesados.",
+    "precio": 89.0,
+    "imagenn": "https://images.unsplash.com/photo-1582719478181-266d5fd35a73?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 14,
+    "nombre": "Chaleco reflectante",
+    "descripcion": "Alta visibilidad para trabajos nocturnos.",
+    "precio": 7.5,
+    "imagenn": "https://images.unsplash.com/photo-1594035910919-5749a2b44c69?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 15,
+    "nombre": "Cortadora de cerámica",
+    "descripcion": "Perfecta para azulejos y pisos cerámicos.",
+    "precio": 120.0,
+    "imagenn": "https://images.unsplash.com/photo-1597012608485-abe423ef82b1?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 16,
+    "nombre": "Espátula metálica",
+    "descripcion": "Para aplicar y remover materiales.",
+    "precio": 5.25,
+    "imagenn": "https://images.unsplash.com/photo-1634664886710-ecf1a6f6e07d?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 17,
+    "nombre": "Andamio portátil",
+    "descripcion": "Estructura estable y segura para altura.",
+    "precio": 299.99,
+    "imagenn": "https://images.unsplash.com/photo-1580382644474-0cfeb4b5b0e2?auto=format&fit=crop&w=600&q=80"
+  }
+]

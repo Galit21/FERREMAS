@@ -13,12 +13,14 @@ export async function registrarUsuario(email, password, datosAdicionales) {
     // Guardar datos adicionales en Firestore
     await setDoc(doc(db, "usuarios", user.uid), {
       nombre: datosAdicionales.nombre,
+      apellido: datosAdicionales.apellido,
       fechaNacimiento: datosAdicionales.fechaNacimiento,
       telefono: datosAdicionales.telefono,
       region: datosAdicionales.region,
       comuna: datosAdicionales.comuna,
       rut: datosAdicionales.rut,
       email: user.email,
+      id_rol: 2, // Asignar rol de usuario por defecto
     });
 
     return userCredential;
@@ -82,6 +84,7 @@ document.getElementById("registroForm").addEventListener("submit", async (e) => 
 
   // Obtener los valores del formulario
   const nombre = document.getElementById("nombre").value;
+  const apellido = document.getElementById("apellido").value;
   const password = document.getElementById("password").value;
   const fechaNacimiento = document.getElementById("fechaNacimiento").value;
   const telefono = document.getElementById("telefono").value;
@@ -92,6 +95,7 @@ document.getElementById("registroForm").addEventListener("submit", async (e) => 
   // Registrar al usuario
   const userCredential = await registrarUsuario(email, password, {
     nombre,
+    apellido,
     fechaNacimiento,
     telefono,
     region,
@@ -104,3 +108,4 @@ document.getElementById("registroForm").addEventListener("submit", async (e) => 
     await enviarVerificacionCorreo(userCredential.user);
   }
 });
+
