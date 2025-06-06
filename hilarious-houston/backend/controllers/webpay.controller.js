@@ -11,7 +11,7 @@ export async function crearTransaccion(req, res) {
   try {
     const buyOrder = "orden-" + Math.floor(Math.random() * 1000000);
     const sessionId = "sesion-" + Math.floor(Math.random() * 1000000);
-    const amount = 10000;
+    const amount =  parseInt(req.body.amount);
     const returnUrl = "http://localhost:3000/webpay/respuesta";
 
     // ✅ Configuración de pruebas manual

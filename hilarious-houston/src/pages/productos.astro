@@ -1,5 +1,6 @@
 ---
 import Header from '../components/Header.jsx';
+import CartPopup from '../components/CartPopup.jsx';
 import ProductoComponent from '../components/ProductoComponent.jsx';
 ---
 
@@ -22,5 +23,7 @@ import ProductoComponent from '../components/ProductoComponent.jsx';
   <body>
     <Header client:load />
     <ProductoComponent client:load />
+    <CartPopup client:load />
+    <script type="module" src="/src/scripts/productos.js"></script>
   </body>
 </html>

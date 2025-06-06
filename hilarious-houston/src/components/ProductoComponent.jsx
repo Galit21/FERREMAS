@@ -10,6 +10,22 @@ export default function ProductoComponent() {
       .catch((err) => console.error("[Error al cargar productos]", err));
   }, []);
 
+  const agregarAlCarrito = (producto) => {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    const existente = carrito.find((p) => p.id === producto.id);
+    if (existente) {
+      existente.cantidad += 1;
+      console.log(`✅ Producto actualizado: ${existente.nombre} x${existente.cantidad}`);
+    } else {
+      carrito.push({ ...producto, cantidad: 1 });
+      console.log(`✅ Producto agregado: ${producto.nombre}`);
+    }
+
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    console.log("🛒 Carrito actual:", carrito);
+  };
+
   return (
     <div className="container p-5 bg-light">
       <h2 className="text-center mb-4">Nuestros productos</h2>
@@ -30,7 +46,11 @@ export default function ProductoComponent() {
                 </p>
                 <div className="mt-auto d-flex justify-content-between align-items-center">
                   <span className="h5 mb-0">${producto.precio}</span>
-                  <button className="btn btn-outline-dark">
+                  <button
+                    type="button"
+                    className="btn btn-outline-dark"
+                    onClick={() => agregarAlCarrito(producto)}
+                  >
                     <i className="bi bi-cart-plus"></i> Añadir
                   </button>
                 </div>
