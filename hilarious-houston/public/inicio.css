@@ -101,9 +101,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-y: auto;
+  overflow: hidden scroll;
   border-radius: 20px;
-  overflow: hidden;
 }
 
 .main-content img {
@@ -309,26 +308,26 @@ body {
   transform: scale(1.05);
 }
 
-form{
-    text-align: left;
+form {
+  text-align: left;
 }
 
 .cart-item img {
-     max-width: 100px;
-     height: auto;
- }
+  max-width: 100px;
+  height: auto;
+}
 
- .quantity-input {
-     width: 50px;
- }
+.quantity-input {
+  width: 50px;
+}
 
- .cart-summary {
-     background-color: #f8f9fa;
-     border-radius: 10px;
- }
+.cart-summary {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
 
- .body_carrocompra{
-      background-color: #f8f9fa;
-      padding: 20px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
- }
+.body_carrocompra {
+  background-color: #f8f9fa;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

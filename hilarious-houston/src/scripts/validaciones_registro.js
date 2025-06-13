@@ -1,13 +1,16 @@
 // Función para cargar regiones y comunas desde el archivo JSON
 async function cargarRegionesYComunas() {
-  const regionSelect = document.getElementById("region");
-  const comunaSelect = document.getElementById("comuna");
+  const regionSelect =
+    typeof document !== "undefined" ? document.getElementById("region") : null;
+  const comunaSelect =
+    typeof document !== "undefined" ? document.getElementById("comuna") : null;
+  if (!regionSelect || !comunaSelect) return;
 
   try {
     // Cargar datos desde el archivo JSON
-    const response = await fetch('/data/regiones_comunas.json');
+    const response = await fetch("/data/regiones_comunas.json");
     if (!response.ok) {
-      throw new Error('Error al cargar los datos de regiones y comunas');
+      throw new Error("Error al cargar los datos de regiones y comunas");
     }
     const regionesComunas = await response.json();
 
@@ -22,7 +25,8 @@ async function cargarRegionesYComunas() {
     // Actualizar comunas según la región seleccionada
     regionSelect.addEventListener("change", () => {
       const regionCodigo = regionSelect.value;
-      comunaSelect.innerHTML = '<option value="">Selecciona una comuna</option>'; // Limpiar comunas
+      comunaSelect.innerHTML =
+        '<option value="">Selecciona una comuna</option>'; // Limpiar comunas
 
       const region = regionesComunas.find((r) => r.codigo === regionCodigo);
       if (region) {
@@ -35,7 +39,7 @@ async function cargarRegionesYComunas() {
       }
     });
   } catch (error) {
-    console.error('Error al cargar regiones y comunas:', error);
+    console.error("Error al cargar regiones y comunas:", error);
   }
 }
 
@@ -69,12 +73,16 @@ function validarFormulario() {
   }
 
   if (!validarTelefono(telefono)) {
-    alert("El número de teléfono no es válido. Debe tener el formato +56912345678.");
+    alert(
+      "El número de teléfono no es válido. Debe tener el formato +56912345678."
+    );
     return false;
   }
 
   if (!validarContrasena(password)) {
-    alert("La contraseña debe tener al menos 1 mayúscula, 1 número y 8 caracteres.");
+    alert(
+      "La contraseña debe tener al menos 1 mayúscula, 1 número y 8 caracteres."
+    );
     return false;
   }
 
@@ -82,28 +90,31 @@ function validarFormulario() {
 }
 
 // Mostrar un mensaje debajo del campo de contraseña
-document.getElementById("password").addEventListener("focus", () => {
-  let mensaje = document.getElementById("password-help");
-  if (!mensaje) {
-    mensaje = document.createElement("div");
-    mensaje.id = "password-help";
-    mensaje.style.color = "gray";
-    mensaje.style.fontSize = "0.8rem";
-    mensaje.textContent = "La contraseña debe tener al menos 1 mayúscula, 1 número y 8 caracteres.";
-    document.getElementById("password").parentNode.appendChild(mensaje);
-  }
-});
+if (typeof document !== "undefined") {
+  document.getElementById("password").addEventListener("focus", () => {
+    let mensaje = document.getElementById("password-help");
+    if (!mensaje) {
+      mensaje = document.createElement("div");
+      mensaje.id = "password-help";
+      mensaje.style.color = "gray";
+      mensaje.style.fontSize = "0.8rem";
+      mensaje.textContent =
+        "La contraseña debe tener al menos 1 mayúscula, 1 número y 8 caracteres.";
+      document.getElementById("password").parentNode.appendChild(mensaje);
+    }
+  });
 
-// Eliminar el mensaje cuando el usuario salga del campo
-document.getElementById("password").addEventListener("blur", () => {
-  const mensaje = document.getElementById("password-help");
-  if (mensaje) {
-    mensaje.remove();
-  }
-});
+  // Eliminar el mensaje cuando el usuario salga del campo
+  document.getElementById("password").addEventListener("blur", () => {
+    const mensaje = document.getElementById("password-help");
+    if (mensaje) {
+      mensaje.remove();
+    }
+  });
 
-// Inicializar funciones al cargar la página
-document.addEventListener("DOMContentLoaded", cargarRegionesYComunas);
+  // Inicializar funciones al cargar la página
+  document.addEventListener("DOMContentLoaded", cargarRegionesYComunas);
+}
 
 // Exportar las funciones para usarlas en otros archivos
 export { validarFormulario };
