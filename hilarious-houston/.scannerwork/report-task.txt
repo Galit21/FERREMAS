@@ -1,0 +1,6 @@
+projectKey=Ferremas
+serverUrl=http://localhost:9000
+serverVersion=25.1.0.102122
+dashboardUrl=http://localhost:9000/dashboard?id=Ferremas
+ceTaskId=fa881394-fa69-450e-aadb-b22e60afadc5
+ceTaskUrl=http://localhost:9000/api/ce/task?id=fa881394-fa69-450e-aadb-b22e60afadc5

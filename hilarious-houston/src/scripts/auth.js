@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, sendEmailVerification, fetchSignInMethodsForEmail } from "firebase/auth";
+import {createUserWithEmailAndPassword,sendEmailVerification,fetchSignInMethodsForEmail,} from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 import { auth, db } from "../firebase.js";
 import { validarFormulario } from "./validaciones_registro.js";
@@ -7,7 +7,7 @@ import { validarFormulario } from "./validaciones_registro.js";
 export async function registrarUsuario(email, password, datosAdicionales) {
   try {
     // Registrar al usuario en Firebase Authentication
-    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+    const userCredential = await createUserWithEmailAndPassword(auth,email,password);
     const user = userCredential.user;
 
     // Guardar datos adicionales en Firestore
@@ -35,7 +35,9 @@ export async function registrarUsuario(email, password, datosAdicionales) {
 async function enviarVerificacionCorreo(user) {
   try {
     await sendEmailVerification(user);
-    alert("Se ha enviado un correo de verificación. Por favor, revisa tu bandeja de entrada.");
+    alert(
+      "Se ha enviado un correo de verificación. Por favor, revisa tu bandeja de entrada."
+    );
   } catch (error) {
     console.error("Error al enviar correo de verificación:", error.message);
   }
@@ -66,46 +68,49 @@ async function verificarCorreo(email) {
 }
 
 // Manejar el evento de envío del formulario
-document.getElementById("registroForm").addEventListener("submit", async (e) => {
-  e.preventDefault(); // Evitar que la página se recargue
+document
+  .getElementById("registroForm")
+  .addEventListener("submit", async (e) => {
+    e.preventDefault(); // Evitar que la página se recargue
 
-  const email = document.getElementById("email").value;
+    const email = document.getElementById("email").value;
 
-  // Verificar si el correo ya está registrado
-  if (await verificarCorreo(email)) {
-    alert("El correo electrónico ya está en uso. Por favor, utiliza otro correo.");
-    return;
-  }
+    // Verificar si el correo ya está registrado
+    if (await verificarCorreo(email)) {
+      alert(
+        "El correo electrónico ya está en uso. Por favor, utiliza otro correo."
+      );
+      return;
+    }
 
-  // Validar los campos del formulario
-  if (!validarFormulario()) {
-    return; // Detener el registro si hay errores
-  }
+    // Validar los campos del formulario
+    if (!validarFormulario()) {
+      return; // Detener el registro si hay errores
+    }
 
-  // Obtener los valores del formulario
-  const nombre = document.getElementById("nombre").value;
-  const apellido = document.getElementById("apellido").value;
-  const password = document.getElementById("password").value;
-  const fechaNacimiento = document.getElementById("fechaNacimiento").value;
-  const telefono = document.getElementById("telefono").value;
-  const region = document.getElementById("region").value;
-  const comuna = document.getElementById("comuna").value;
-  const rut = document.getElementById("rut").value;
+    // Obtener los valores del formulario
+    const nombre = document.getElementById("nombre").value;
+    const apellido = document.getElementById("apellido").value;
+    const password = document.getElementById("password").value;
+    const fechaNacimiento = document.getElementById("fechaNacimiento").value;
+    const telefono = document.getElementById("telefono").value;
+    const region = document.getElementById("region").value;
+    const comuna = document.getElementById("comuna").value;
+    const rut = document.getElementById("rut").value;
 
-  // Registrar al usuario
-  const userCredential = await registrarUsuario(email, password, {
-    nombre,
-    apellido,
-    fechaNacimiento,
-    telefono,
-    region,
-    comuna,
-    rut,
+    // Registrar al usuario
+    const userCredential = await registrarUsuario(email, password, {
+      nombre,
+      apellido,
+      fechaNacimiento,
+      telefono,
+      region,
+      comuna,
+      rut,
+    });
+
+    // Enviar correo de verificación
+    if (userCredential) {
+      await enviarVerificacionCorreo(userCredential.user);
+    }
   });
-
-  // Enviar correo de verificación
-  if (userCredential) {
-    await enviarVerificacionCorreo(userCredential.user);
-  }
-});
-

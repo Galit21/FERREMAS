@@ -1,14 +1,20 @@
 import transbank from "transbank-sdk";
-const {
-  WebpayPlus,
-  Options,
-  IntegrationCommerceCodes,
-  IntegrationApiKeys,
-  Environment,
-} = transbank;
+
+let sdk = transbank;
+
+export function setTransbankSDK(mock) {
+  sdk = mock;
+}
 
 export async function crearTransaccion(req, res) {
   try {
+    const {
+      WebpayPlus,
+      Options,
+      IntegrationCommerceCodes,
+      IntegrationApiKeys,
+      Environment,
+    } = sdk;
     const buyOrder = "orden-" + Math.floor(Math.random() * 1000000);
     const sessionId = "sesion-" + Math.floor(Math.random() * 1000000);
     const amount =  parseInt(req.body.amount);
@@ -40,6 +46,13 @@ export async function crearTransaccion(req, res) {
 export async function confirmarTransaccion(req, res) {
   try {
     const token = req.query.token_ws;
+    const {
+      WebpayPlus,
+      Options,
+      IntegrationCommerceCodes,
+      IntegrationApiKeys,
+      Environment,
+    } = sdk;
 
     const options = new Options(
       IntegrationCommerceCodes.WEBPAY_PLUS,
