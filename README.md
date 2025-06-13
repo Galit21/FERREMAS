@@ -4,5 +4,5 @@
 
 Para ejecutar el proyecto, dentro de la carpeta "hilarious-houston" ejecutar "npm run dev", en la terminal se verá el puerto a nivel local donde se está ejecutando el proyecto.<br>
 Se debe levantar el servicio de node para acceder al servicio de transbank, para esto, dentro "hilarious-houston/backend" en terminal ejecutar "node app.js". <br>
-Ambos servicios deben estar corriendo de manera simultanea para que la apliación tenga el flujo completo.<br>
+Ambos servicios deben estar corriendo de manera simultanea para que la apliación tenga el flujo completo.<br><br>
 Para ejecutar el test a la integración de transbank, ejecutar en el directorio "hilarious-houston" el comando "npm test"
